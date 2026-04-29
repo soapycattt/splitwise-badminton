@@ -53,6 +53,7 @@ The user provides:
 3. **Generate session YAML** — Save to `artifacts/YYYYMMDD_ddd.yaml`:
    ```yaml
    date: 2026-04-26
+   total: 850000
    day: sunday
    # Single owner format:
    shuttlecocks: 7
@@ -62,6 +63,10 @@ The user provides:
      Triet Le: 5
      Long Dinh: 8
    host: Duong Ly
+   # Absorbed players (name: amount in VND) — metadata only, not used by script
+   absorbed:
+     Vy Lan: 85333
+     Phú Lâm: 42667
    players:
      # +1 voters (ratio 2)
      Nhi Tran: 2
@@ -70,9 +75,11 @@ The user provides:
      Bùi Thanh Tùng: 1
      Nguyễn Minh Khuê: 1
    ```
+   - `total` field = court + (shuttlecocks × 30k) — the full expense amount in VND
    - Omit `court` field — auto-resolved from `config.json` by day of week
    - If shuttlecock owner = host → no reimbursement expense created
    - Use `shuttlecock_owners` (dict) for multiple owners, or `shuttlecock_owner` (string) + `shuttlecocks` (int) for single
+   - `absorbed` field is metadata (name: amount VND absorbed into host). Compute amount = ratio × (total / sum_of_all_ratios)
    - Add YAML comments noting absorbed/aliased players
 
 4. **Preview** — Dry-run and show the user a formatted summary:

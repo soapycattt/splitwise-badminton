@@ -1,7 +1,10 @@
 date: 2026-04-18
+total: 300000
 day: saturday
 shuttlecocks: 0
 host: Duong Ly
+absorbed:
+  Nguyễn Hồng Hoài Bảo: 30000
 players:
   # +1 voters (ratio 2)
   Nguyên Hoàng: 2

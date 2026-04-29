@@ -1,7 +1,11 @@
 date: 2026-04-25
+total: 300000
 day: saturday
 shuttlecocks: 0
 host: Duong Ly
+absorbed:
+  Phuong N. Tran: 112500
+  Nguyễn Hồng Hoài Bảo: 37500
 players:
   # +2 voter (ratio 3) — absorbed into Duong Ly (not in Splitwise)
   Phuong N. Tran: 3

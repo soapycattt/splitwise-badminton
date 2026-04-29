@@ -1,4 +1,5 @@
 date: 2026-04-26
+total: 850000
 day: sunday
 # court: auto-resolved from config (sunday = 640k)
 shuttlecocks: 7
@@ -6,6 +7,9 @@ shuttlecock_owner: Duong Ly
 # NOTE: Tung actually paid for shuttlecocks but already created reimbursement
 # himself on Splitwise, so we set owner = host to skip the auto-reimbursement
 host: Duong Ly
+absorbed:
+  Vũ Hải Sơn: 65385
+  Phú Lâm: 65385
 players:
   # +1 voters (ratio 2)
   Nhi Tran: 2

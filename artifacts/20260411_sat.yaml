@@ -1,8 +1,12 @@
 date: 2026-04-11
+total: 600000
 day: saturday
 court: 600000
 shuttlecocks: 0
 host: Duong Ly
+absorbed:
+  Vy Lan: 133333
+  Phuong N. Tran: 66667
 players:
   # +1 voters (ratio 2)
   Hoa Huynh: 2

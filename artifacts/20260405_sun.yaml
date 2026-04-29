@@ -1,7 +1,11 @@
 date: 2026-04-05
+total: 640000
 day: sunday
 shuttlecocks: 0
 host: Duong Ly
+absorbed:
+  Vy Lan: 85333
+  Phú Lâm: 42667
 players:
   # +1 voters (ratio 2)
   Nhi Tran: 2

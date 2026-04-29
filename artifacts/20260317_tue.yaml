@@ -1,8 +1,11 @@
 date: 2026-03-17
+total: 195000
 day: tuesday
 shuttlecocks: 2
 shuttlecock_owner: Phien Pham
 host: Duong Ly
+absorbed:
+  Phuong N. Tran: 48750
 players:
   # Absorbed into Duong Ly (not in Splitwise)
   Phuong N. Tran: 1

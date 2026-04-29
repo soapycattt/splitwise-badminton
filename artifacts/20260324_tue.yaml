@@ -1,7 +1,10 @@
 date: 2026-03-24
+total: 135000
 day: tuesday
 shuttlecocks: 0
 host: Duong Ly
+absorbed:
+  Phuong N. Tran: 33750
 players:
   # Absorbed: Phuong N. Tran (unmatched → Duong Ly)
   Duong Ly: 1

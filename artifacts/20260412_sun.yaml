@@ -1,10 +1,13 @@
 date: 2026-04-12
+total: 1350000
 day: sunday
 court: 960000
 shuttlecock_owners:
   nhity: 10
   Long Dinh: 3
 host: Duong Ly
+absorbed:
+  Gia Hân: 519231
 players:
   # +4 voter — absorbed (Gia Hân → Duong Ly)
   Gia Hân: 5

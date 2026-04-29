@@ -1,8 +1,12 @@
 date: 2026-03-29
+total: 960000
 day: sunday
 court: 960000
 shuttlecocks: 0
 host: Duong Ly
+absorbed:
+  Vũ Hải Sơn: 50526
+  Phú Lâm: 50526
 players:
   # +1 voters (ratio 2)
   Nhi Tran: 2
