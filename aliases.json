@@ -17,11 +17,24 @@
     "thang pham": "thắng phạm",
     "hanh phan thuy": "hailey phan",
     "hanh phan": "hailey phan",
-    "lê thị chi linh": "thắng phạm"
+    "lê thị chi linh": "thắng phạm",
+    "đào đức": "Đức",
+    "phien pham": "phiendpham",
+    "duy hồ": "duy ho",
+    "thành nguyễn": "thành nguyễn",
+    "mai thanh ngọc": "ngọc zoe",
+    "ha pham": "phạm hoàng hà",
+    "nguyễn hà minh anh": "nguyen ha minh anh",
+    "khoa": "a.khoa",
+    "nguyen tran nam": "nam",
+    "lý dương": "duong ly",
+    "amyra nguyễn": "amyra",
+    "uyen nhi": "uyên nhi",
+    "hoa huynh": "hoa huynh"
   },
   "_unmatched_routing": {
     "_comment": "People not in Splitwise group — their share gets added to this person",
     "default_absorber": "duong ly",
-    "people": ["vũ hải sơn", "long dinh", "phú lâm"]
+    "people": ["vũ hải sơn", "phú lâm", "phuong n. tran", "nguyễn hồng hoài bảo", "vy lan", "gia hân"]
   }
 }

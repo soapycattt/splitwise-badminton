@@ -1,0 +1,18 @@
+date: 2026-04-12
+day: sunday
+court: 960000
+shuttlecock_owners:
+  nhity: 10
+  Long Dinh: 3
+host: Duong Ly
+players:
+  # +4 voter — absorbed (Gia Hân → Duong Ly)
+  Gia Hân: 5
+  # +1 voters (ratio 2)
+  Hailey Phan: 2
+  thành nguyễn: 2
+  # Regular voters (ratio 1)
+  nhity: 1
+  thanh tùng bùi: 1
+  Long Dinh: 1
+  khuê: 1

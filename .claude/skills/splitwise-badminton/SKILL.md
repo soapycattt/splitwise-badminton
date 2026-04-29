@@ -54,8 +54,13 @@ The user provides:
    ```yaml
    date: 2026-04-26
    day: sunday
+   # Single owner format:
    shuttlecocks: 7
    shuttlecock_owner: Bùi Thanh Tùng
+   # OR multiple owners format:
+   shuttlecock_owners:
+     Triet Le: 5
+     Long Dinh: 8
    host: Duong Ly
    players:
      # +1 voters (ratio 2)
@@ -67,6 +72,7 @@ The user provides:
    ```
    - Omit `court` field — auto-resolved from `config.json` by day of week
    - If shuttlecock owner = host → no reimbursement expense created
+   - Use `shuttlecock_owners` (dict) for multiple owners, or `shuttlecock_owner` (string) + `shuttlecocks` (int) for single
    - Add YAML comments noting absorbed/aliased players
 
 4. **Preview** — Dry-run and show the user a formatted summary:

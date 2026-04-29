@@ -1,0 +1,20 @@
+date: 2026-03-22
+day: sunday
+shuttlecock_owners:
+  Nguyễn Hà Minh Anh: 4
+  Khoa: 2
+  Triet Le: 4
+host: Duong Ly
+players:
+  # +1 voters (ratio 2)
+  Nhi Tran: 2
+  Triet Le: 2
+  Lê Thị Chi Linh: 2
+  # +2 voters (ratio 3)
+  Thắng Phạm: 3
+  # Regular voters (ratio 1)
+  Bùi Thanh Tùng: 1
+  Duy Hồ: 1
+  Long Dinh: 1
+  Thành Nguyễn: 1
+  Nguyễn Hà Minh Anh: 1

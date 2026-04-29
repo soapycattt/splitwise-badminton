@@ -1,0 +1,13 @@
+date: 2026-03-21
+day: saturday
+shuttlecocks: 5
+shuttlecock_owner: phiendpham
+host: Duong Ly
+players:
+  # +1 voter (ratio 2)
+  Đức: 2
+  # Regular voters (ratio 1)
+  phiendpham: 1
+  ngọc zoe: 1
+  thanh tùng bùi: 1
+  Khanh Tran Quoc: 1

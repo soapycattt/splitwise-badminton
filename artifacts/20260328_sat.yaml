@@ -1,0 +1,8 @@
+date: 2026-03-28
+day: saturday
+# CANCELLED: Court lost electricity, got refunded. No expense created.
+cancelled: true
+cancel_reason: Power outage at court, full refund received
+shuttlecocks: 0
+host: Duong Ly
+players: {}

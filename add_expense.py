@@ -167,16 +167,23 @@ def main():
             print(f"Error: No court price for {day_name}. Set 'court' in YAML or add to config.json")
             sys.exit(1)
 
-    shuttlecock_count = int(session.get("shuttlecocks", 0))
-    shuttlecock_owner_name = session.get("shuttlecock_owner", session.get("host", CONFIG.get("default_host", "")))
     host_name = session.get("host", CONFIG.get("default_host", ""))
     players = session["players"]
+
+    # Support multiple shuttlecock owners: shuttlecock_owners: {name: count}
+    # Falls back to single shuttlecock_owner + shuttlecocks count
+    if "shuttlecock_owners" in session:
+        shuttlecock_owners = {name: int(count) for name, count in session["shuttlecock_owners"].items()}
+        shuttlecock_count = sum(shuttlecock_owners.values())
+    else:
+        shuttlecock_count = int(session.get("shuttlecocks", 0))
+        owner_name = session.get("shuttlecock_owner", host_name)
+        shuttlecock_owners = {owner_name: shuttlecock_count} if shuttlecock_count > 0 else {}
 
     shuttlecock_total = shuttlecock_count * shuttlecock_cost
     total_cost = court_cost + shuttlecock_total
 
     host_id, host_resolved, _ = resolve_user(host_name, members, aliases, unmatched_people, default_absorber)
-    shuttle_owner_id, shuttle_resolved, _ = resolve_user(shuttlecock_owner_name, members, aliases, unmatched_people, default_absorber)
 
     total_ratio = sum(players.values())
     cost_per_unit = total_cost / total_ratio
@@ -199,6 +206,9 @@ def main():
     # Round shares to 2 decimals, assign remainder to last person to match total exactly
     import math
     raw_shares = [(uid, owed) for uid, (owed, _) in user_shares.items()]
+    # Include host with owed=0 if not already a player (host only pays, doesn't split)
+    if host_id not in [uid for uid, _ in raw_shares]:
+        raw_shares.insert(0, (host_id, 0))
     shares = [(uid, math.floor(owed * 100) / 100) for uid, owed in raw_shares]
     remainder = total_cost - sum(owed for _, owed in shares)
     last_uid, last_owed = shares[-1]
@@ -211,7 +221,12 @@ def main():
     print(f"Shuttlecocks: {shuttlecock_count} x {shuttlecock_cost:,} = {shuttlecock_total:,.0f} VND")
     print(f"Total:        {total_cost:,.0f} VND")
     print(f"Host (payer): {host_name} → {host_resolved}")
-    print(f"Shuttle owner: {shuttlecock_owner_name} → {shuttle_resolved}")
+    if shuttlecock_owners:
+        for owner, count in shuttlecock_owners.items():
+            _, resolved, _ = resolve_user(owner, members, aliases, unmatched_people, default_absorber)
+            print(f"Shuttle owner: {owner} → {resolved} ({count} sc)")
+    else:
+        print(f"Shuttle owner: {host_name} → {host_resolved} (0 sc)")
     print(f"\nSplit ({total_ratio} shares, {cost_per_unit:,.0f} VND/share):")
     for uid, (owed, names) in user_shares.items():
         label = ", ".join(names)
@@ -238,18 +253,21 @@ def main():
     expense = create_expense(desc, total_cost, group_id, host_id, shares, date=date)
     print(f"\n✓ Created: '{desc}' ({total_cost:,.0f} VND) — id: {expense['id']}")
 
-    if shuttle_owner_id != host_id and shuttlecock_total > 0:
-        reimburse_shares = [
-            (host_id, shuttlecock_total),
-            (shuttle_owner_id, 0),
-        ]
-        reimburse_desc = f"Shuttlecock reimbursement {date}"
-        expense2 = create_expense(
-            reimburse_desc, shuttlecock_total, group_id,
-            shuttle_owner_id, reimburse_shares, date=date,
-        )
-        print(f"✓ Created: '{reimburse_desc}' ({shuttlecock_total:,.0f} VND) — id: {expense2['id']}")
-        print(f"  ({host_resolved} owes {shuttle_resolved} for shuttlecocks)")
+    for owner_name, owner_count in shuttlecock_owners.items():
+        owner_id, owner_resolved, _ = resolve_user(owner_name, members, aliases, unmatched_people, default_absorber)
+        owner_total = owner_count * shuttlecock_cost
+        if owner_id != host_id and owner_total > 0:
+            reimburse_shares = [
+                (host_id, owner_total),
+                (owner_id, 0),
+            ]
+            reimburse_desc = f"Shuttlecock reimbursement {date} ({owner_resolved})"
+            expense2 = create_expense(
+                reimburse_desc, owner_total, group_id,
+                owner_id, reimburse_shares, date=date,
+            )
+            print(f"✓ Created: '{reimburse_desc}' ({owner_total:,.0f} VND) — id: {expense2['id']}")
+            print(f"  ({host_resolved} owes {owner_resolved} for {owner_count} shuttlecocks)")
 
     print("\nDone!")
 
