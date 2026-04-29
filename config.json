@@ -1,0 +1,11 @@
+{
+  "court_prices": {
+    "sunday": 640000,
+    "saturday": 300000,
+    "tuesday": 135000
+  },
+  "shuttlecock_cost": 30000,
+  "default_host": "duong ly",
+  "group_id": 82856058,
+  "currency": "VND"
+}

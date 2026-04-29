@@ -1,0 +1,27 @@
+{
+  "_comment": "Maps screenshot/poll names to Splitwise member names (lowercase keys)",
+  "aliases": {
+    "nhi tran": "nhity",
+    "bùi thanh tùng": "thanh tùng bùi",
+    "tung bui": "thanh tùng bùi",
+    "nguyễn minh khuê": "khuê",
+    "nguyễn sơn tùng": "tung",
+    "dương nghi": "nghi nghi",
+    "diễm quỳnh": "em quỳnh",
+    "duong ly": "duong ly",
+    "be ly": "duong ly",
+    "ly duong": "duong ly",
+    "triet le": "ben le",
+    "triet": "ben le",
+    "thắng phạm": "thắng phạm",
+    "thang pham": "thắng phạm",
+    "hanh phan thuy": "hailey phan",
+    "hanh phan": "hailey phan",
+    "lê thị chi linh": "thắng phạm"
+  },
+  "_unmatched_routing": {
+    "_comment": "People not in Splitwise group — their share gets added to this person",
+    "default_absorber": "duong ly",
+    "people": ["vũ hải sơn", "long dinh", "phú lâm"]
+  }
+}
