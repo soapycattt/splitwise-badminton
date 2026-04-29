@@ -14,12 +14,15 @@ All scripts and config live at: `/Users/triet.lequang/Documents/personal/splitwi
 ## Input
 
 The user provides:
-1. **Screenshot(s)** from a poll app showing:
-   - Main voter list (e.g. "11 votes for CN 6-8PM") — these are the players
-   - +1 voter list (e.g. "3 votes for CN +1") — these players have ratio 2
-   - If there's a +2 list, those players have ratio 3
+1. **Screenshots from Facebook Messenger poll** — each poll item shows voters who tapped it:
+   - **Main session poll** (e.g. "CN 6-8PM" or "T7 4-6PM") — screenshot showing all voters. These are the players (ratio 1 each).
+   - **+1 poll** (e.g. "CN +1") — screenshot showing voters who bring one extra person. These voters get ratio 2.
+   - **+2 poll** (e.g. "CN +2") — if exists, screenshot showing voters bringing two extras. These voters get ratio 3.
+   
+   Each screenshot shows the poll item title at the top (e.g. "11 votes for CN 6-8PM") and a list of voter names with profile pictures below.
+
 2. **Text info** (user tells you, or you ask):
-   - Date of the session (or infer from poll title: CN = Sunday, T7 = Saturday, T3 = Tuesday)
+   - Date of the session (or infer from poll title: CN = Sunday/Chủ Nhật, T7 = Saturday/Thứ 7, T3 = Tuesday/Thứ 3)
    - Shuttlecock count
    - Who paid for shuttlecocks
    - Any overrides (different host, someone already handled reimbursement, etc.)
@@ -47,7 +50,7 @@ The user provides:
    - If name is in `_unmatched_routing.people` → share absorbed into default absorber (Duong Ly)
    - If name isn't found anywhere → **ask the user** before proceeding
 
-3. **Generate session YAML** — Save to `artifacts/YYYYMMDD_day.yaml`:
+3. **Generate session YAML** — Save to `artifacts/YYYYMMDD_ddd.yaml`:
    ```yaml
    date: 2026-04-26
    day: sunday
@@ -69,13 +72,13 @@ The user provides:
 4. **Preview** — Dry-run and show the user a formatted summary:
    ```bash
    cd /Users/triet.lequang/Documents/personal/splitwise
-   .venv/bin/python add_expense.py artifacts/YYYYMMDD_day.yaml --dry-run
+   .venv/bin/python add_expense.py artifacts/YYYYMMDD_ddd.yaml --dry-run
    ```
    Show: total, per-person breakdown, absorbed players, expense title.
 
 5. **Confirm and execute** — Only after user says yes:
    ```bash
-   echo "y" | .venv/bin/python add_expense.py artifacts/YYYYMMDD_day.yaml
+   echo "y" | .venv/bin/python add_expense.py artifacts/YYYYMMDD_ddd.yaml
    ```
 
 ## Output
@@ -118,4 +121,6 @@ Add their lowercase name to `_unmatched_routing.people` in `aliases.json`. Their
 They still get included. Their name appears only in the +1 screenshot → ratio 2.
 
 **Multiple sessions on same date:**
-Append a suffix to the artifact filename, e.g. `session_2026-04-26_2.yaml`.
+Append a suffix to the artifact filename, e.g. `20260426_sun_2.yaml`.
+
+**Artifact naming:** Use 3-letter day abbreviation: `sun`, `sat`, `tue`. Example: `20260426_sun.yaml`.
