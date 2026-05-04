@@ -5,18 +5,12 @@ shuttlecock_owners:
   Triet Le: 5
   Long Dinh: 8
 host: Duong Ly
-absorbed:
-  Phú Lâm: 73571
 players:
-  # +1 voters (ratio 2)
   Nhi Tran: 2
   Triet Le: 2
-  # +2 voters (ratio 3)
   Thắng Phạm: 3
   Thành Nguyễn: 3
-  # Regular voters (ratio 1)
   Duy Hồ: 1
   Long Dinh: 1
   Lê Thị Chi Linh: 1
-  # Absorbed into Duong Ly (not in Splitwise)
   Phú Lâm: 1

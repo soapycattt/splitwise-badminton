@@ -3,11 +3,8 @@ total: 135000
 day: tuesday
 shuttlecocks: 0
 host: Duong Ly
-absorbed:
-  Phuong N. Tran: 33750
 players:
-  # Absorbed: Phuong N. Tran (unmatched → Duong Ly)
-  Duong Ly: 1
+  Phuong N. Tran: 1
   phiendpham: 1
   ngọc zoe: 1
   thanh tùng bùi: 1

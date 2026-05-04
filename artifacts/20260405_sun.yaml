@@ -5,18 +5,14 @@ shuttlecocks: 0
 host: Duong Ly
 absorbed:
   Vy Lan: 85333
-  Phú Lâm: 42667
 players:
-  # +1 voters (ratio 2)
   Nhi Tran: 2
   Hanh Phan Thuy: 2
   Thắng Phạm: 2
   Thành Nguyễn: 2
   Vy Lan: 2
-  # Regular voters (ratio 1)
   Hoa Huynh: 1
   Long Dinh: 1
   Amyra Nguyễn: 1
   Uyen Nhi: 1
-  # Absorbed into Duong Ly (not in Splitwise)
   Phú Lâm: 1

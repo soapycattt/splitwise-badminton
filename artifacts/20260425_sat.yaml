@@ -3,16 +3,9 @@ total: 300000
 day: saturday
 shuttlecocks: 0
 host: Duong Ly
-absorbed:
-  Phuong N. Tran: 112500
-  Nguyễn Hồng Hoài Bảo: 37500
 players:
-  # +2 voter (ratio 3) — absorbed into Duong Ly (not in Splitwise)
   Phuong N. Tran: 3
-  # Regular voter (ratio 1) — absorbed into Duong Ly (not in Splitwise)
   Nguyễn Hồng Hoài Bảo: 1
-  # +1 only voter (ratio 2)
   Đức: 2
-  # Regular voters (ratio 1)
   Long Dinh: 1
   Khuê: 1

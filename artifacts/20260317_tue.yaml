@@ -4,12 +4,8 @@ day: tuesday
 shuttlecocks: 2
 shuttlecock_owner: Phien Pham
 host: Duong Ly
-absorbed:
-  Phuong N. Tran: 48750
 players:
-  # Absorbed into Duong Ly (not in Splitwise)
   Phuong N. Tran: 1
-  # Regular voters (ratio 1)
   Phien Pham: 1
   Mai Thanh Ngọc: 1
   Bùi Thanh Tùng: 1

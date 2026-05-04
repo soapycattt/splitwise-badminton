@@ -4,22 +4,15 @@ day: sunday
 court: 960000
 shuttlecocks: 0
 host: Duong Ly
-absorbed:
-  Vũ Hải Sơn: 50526
-  Phú Lâm: 50526
 players:
-  # +1 voters (ratio 2)
   Nhi Tran: 2
   Long Dinh: 2
   Hanh Phan Thuy: 2
   Nguyen Tran Nam: 2
-  # +2 voters (ratio 3)
   Thắng Phạm: 3
   Lê Thị Chi Linh: 3
-  # Regular voters (ratio 1)
   Bùi Thanh Tùng: 1
   Lý Dương: 1
   Thành Nguyễn: 1
-  # Absorbed into Duong Ly (not in Splitwise)
   Vũ Hải Sơn: 1
   Phú Lâm: 1

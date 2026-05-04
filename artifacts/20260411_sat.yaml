@@ -6,15 +6,11 @@ shuttlecocks: 0
 host: Duong Ly
 absorbed:
   Vy Lan: 133333
-  Phuong N. Tran: 66667
 players:
-  # +1 voters (ratio 2)
   Hoa Huynh: 2
   Vy Lan: 2
-  # Regular voters (ratio 1)
   Phien Pham: 1
   Bùi Thanh Tùng: 1
   Ha Pham: 1
   Khanh Tran Quoc: 1
-  # Absorbed into Duong Ly (not in Splitwise)
   Phuong N. Tran: 1

@@ -7,15 +7,10 @@ shuttlecock_owner: Duong Ly
 # NOTE: Tung actually paid for shuttlecocks but already created reimbursement
 # himself on Splitwise, so we set owner = host to skip the auto-reimbursement
 host: Duong Ly
-absorbed:
-  Vũ Hải Sơn: 65385
-  Phú Lâm: 65385
 players:
-  # +1 voters (ratio 2)
   Nhi Tran: 2
   Lê Thị Chi Linh: 2
   Dương Nghi: 2
-  # Regular voters (ratio 1)
   Vũ Hải Sơn: 1
   Bùi Thanh Tùng: 1
   Long Dinh: 1
@@ -24,6 +19,3 @@ players:
   Hanh Phan Thuy: 1
   Diễm Quỳnh: 1
   Phú Lâm: 1
-
-# NOTE: Lê Thị Chi Linh not in Splitwise group — added as +1 for Thắng Phạm
-# NOTE: Vũ Hải Sơn, Long Dinh, Phú Lâm not in group — absorbed into Duong Ly

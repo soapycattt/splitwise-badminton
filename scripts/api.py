@@ -92,7 +92,7 @@ def find_expense_by_description(group_id, description):
     resp = requests.get(
         f"{BASE_URL}/get_expenses",
         headers={"Authorization": f"Bearer {API_KEY}"},
-        params={"group_id": group_id, "limit": 50},
+        params={"group_id": group_id, "limit": 200},
     )
     resp.raise_for_status()
     for expense in resp.json().get("expenses", []):
