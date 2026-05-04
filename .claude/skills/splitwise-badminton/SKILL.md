@@ -84,15 +84,17 @@ The user provides:
 
 4. **Preview** — Dry-run and show the user a formatted summary:
    ```bash
-   cd /Users/triet.lequang/Documents/personal/splitwise
-   .venv/bin/python add_expense.py artifacts/YYYYMMDD_ddd.yaml --dry-run
+   cd /Users/triet.lequang/Documents/personal/splitwise/scripts
+   ../.venv/bin/python add_expense.py ../artifacts/YYYYMMDD_ddd.yaml --dry-run
    ```
    Show: total, per-person breakdown, absorbed players, expense title.
+   If expense already exists (matched by description), shows "will UPDATE".
 
 5. **Confirm and execute** — Only after user says yes:
    ```bash
-   echo "y" | .venv/bin/python add_expense.py artifacts/YYYYMMDD_ddd.yaml
+   echo "y" | ../.venv/bin/python add_expense.py ../artifacts/YYYYMMDD_ddd.yaml
    ```
+   The script auto-detects existing expenses by description and updates instead of creating duplicates.
 
 ## Output
 

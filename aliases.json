@@ -30,11 +30,15 @@
     "lý dương": "duong ly",
     "amyra nguyễn": "amyra",
     "uyen nhi": "uyên nhi",
-    "hoa huynh": "hoa huynh"
+    "hoa huynh": "hoa huynh",
+    "vũ hải sơn": "son",
+    "phú lâm": "phú",
+    "phuong n. tran": "phuong tran",
+    "nguyễn hồng hoài bảo": "hoai bao"
   },
   "_unmatched_routing": {
     "_comment": "People not in Splitwise group — their share gets added to this person",
     "default_absorber": "duong ly",
-    "people": ["vũ hải sơn", "phú lâm", "phuong n. tran", "nguyễn hồng hoài bảo", "vy lan", "gia hân"]
+    "people": ["vy lan", "gia hân"]
   }
 }

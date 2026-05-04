@@ -7,7 +7,8 @@ from pathlib import Path
 from dotenv import load_dotenv
 import requests
 
-load_dotenv(Path(__file__).parent / ".env")
+PROJECT_DIR = Path(__file__).parent.parent
+load_dotenv(PROJECT_DIR / ".env")
 API_KEY = os.environ.get("SPLITWISE_API_KEY")
 BASE_URL = "https://secure.splitwise.com/api/v3.0"
 
@@ -45,8 +46,7 @@ def main():
         name = f"{first} {last}".strip()
         members.append({"id": m["id"], "name": name})
 
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    output_path = os.path.join(script_dir, "members.txt")
+    output_path = str(PROJECT_DIR / "members.txt")
 
     with open(output_path, "w") as f:
         f.write(f"# Group: {group['name']} (id: {group['id']})\n")
