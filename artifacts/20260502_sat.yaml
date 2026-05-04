@@ -1,0 +1,20 @@
+date: 2026-05-02
+total: 1320000
+day: saturday
+court: 960000
+shuttlecocks: 12
+shuttlecock_owner: Long Dinh
+host: Duong Ly
+players:
+  # +1 voters (ratio 2)
+  Nhi Tran: 2
+  Long Dinh: 2
+  Đào Đức: 2
+  Nguyễn Sơn Tùng: 2
+  Hanh Phan Thuy: 2
+  # +3 voter (ratio 4)
+  Phuong N. Tran: 4
+  # Regular voters (ratio 1)
+  Vũ Hải Sơn: 1
+  Nguyễn Hồng Hoài Bảo: 1
+  Nguyễn Minh Khuê: 1

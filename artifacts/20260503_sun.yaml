@@ -1,0 +1,19 @@
+date: 2026-05-03
+total: 790000
+day: sunday
+court: 700000
+shuttlecocks: 3
+shuttlecock_owner: Nguyễn Hồng Hoài Bảo
+host: Duong Ly
+players:
+  # +1 voter (ratio 2)
+  Nhi Tran: 2
+  # +2 voter (ratio 3)
+  Thắng Phạm: 3
+  # Regular voters (ratio 1)
+  Ba Khoa Tran: 1
+  Nguyễn Hồng Hoài Bảo: 1
+  Long Dinh: 1
+  Nguyen Tran Nam: 1
+  Lê Thị Chi Linh: 1
+  Diễm Quỳnh: 1

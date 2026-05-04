@@ -99,7 +99,7 @@ def main():
     print(f"Total:        {total_cost:,.0f} VND")
     print(f"Description:  {desc}")
 
-    existing_id = find_expense_by_description(group_id, desc)
+    existing_id = find_expense_by_description(group_id, desc, date=date)
     if not existing_id:
         print(f"\n✗ No existing expense found with description '{desc}'")
         print("  Use add_expense.py to create it first.")
@@ -137,7 +137,7 @@ def main():
                 (owner_id, 0),
             ]
             reimburse_desc = f"Shuttlecock reimbursement {date} ({owner_resolved})"
-            existing_reimburse_id = find_expense_by_description(group_id, reimburse_desc)
+            existing_reimburse_id = find_expense_by_description(group_id, reimburse_desc, date=date)
 
             if existing_reimburse_id:
                 expense2 = update_expense(

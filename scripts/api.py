@@ -87,17 +87,36 @@ def resolve_user(name, members, aliases, unmatched_people, default_absorber):
     sys.exit(1)
 
 
-def find_expense_by_description(group_id, description):
-    """Search for an existing expense by exact description match. Returns expense_id or None."""
+def find_expense_by_description(group_id, description, date=None):
+    """Search for an existing expense by exact description match, with date fallback.
+
+    If exact match fails and date is provided, searches for expenses containing that date
+    (handles description changes like adding shuttlecock count).
+    """
     resp = requests.get(
         f"{BASE_URL}/get_expenses",
         headers={"Authorization": f"Bearer {API_KEY}"},
         params={"group_id": group_id, "limit": 200},
     )
     resp.raise_for_status()
-    for expense in resp.json().get("expenses", []):
+    expenses = resp.json().get("expenses", [])
+
+    for expense in expenses:
         if expense.get("description") == description and expense.get("deleted_at") is None:
             return expense["id"]
+
+    if date:
+        is_reimburse = "reimbursement" in description.lower()
+        for expense in expenses:
+            desc = expense.get("description", "")
+            if expense.get("deleted_at") is not None:
+                continue
+            if date in desc:
+                if is_reimburse and desc.startswith("Shuttlecock"):
+                    return expense["id"]
+                elif not is_reimburse and not desc.startswith("Shuttlecock"):
+                    return expense["id"]
+
     return None
 
 
