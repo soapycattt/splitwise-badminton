@@ -35,11 +35,12 @@
     "vũ hải sơn": "son",
     "phú lâm": "phú",
     "phuong n. tran": "phuong tran",
-    "nguyễn hồng hoài bảo": "hoai bao"
+    "nguyễn hồng hoài bảo": "hoai bao",
+    "vy lan": "vy nguyen"
   },
   "_unmatched_routing": {
     "_comment": "People not in Splitwise group — their share gets added to this person",
     "default_absorber": "duong ly",
-    "people": ["vy lan", "gia hân"]
+    "people": ["gia hân"]
   }
 }
