@@ -1,0 +1,24 @@
+date: 2026-05-17
+total: 1320000
+day: sunday
+court: 960000
+shuttlecocks: 12
+shuttlecock_owner: Ben Le
+host: Duong Ly
+players:
+  # +2 voters (ratio 3)
+  Hailey Phan: 3
+  thành nguyễn: 3
+  # +1 voters (ratio 2)
+  nhity: 2
+  Son: 2
+  Phú: 2
+  # Regular voters (ratio 1)
+  phiendpham: 1
+  Thanh Tùng Bùi: 1
+  Hoai Bao: 1
+  Duy Ho: 1
+  Long Dinh: 1
+  Ben Le: 1
+  Nam: 1
+  em Quỳnh: 1

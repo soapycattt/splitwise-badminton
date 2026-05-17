@@ -1,0 +1,19 @@
+date: 2026-05-16
+total: 450000
+day: saturday
+shuttlecocks: 5
+shuttlecock_owner: phiendpham
+host: Duong Ly
+players:
+  # +1 voter but override to ratio 1
+  Phạm Hoàng Hà: 1
+  # +1 voter but override to ratio 1
+  Đức: 1
+  # Main poll voters (ratio 1)
+  phiendpham: 1
+  Phuong Tran: 1
+  Thanh Tùng Bùi: 1
+  Hoai Bao: 1
+  Long Dinh: 1
+  Khanh Tran Quoc: 1
+  Tung: 1

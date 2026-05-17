@@ -1,0 +1,19 @@
+date: 2026-05-10
+# Actual court: 760k. Shuttlecocks: 16 × 26k = 416k. Total: 1,176k.
+# Court adjusted (760k - 16×4k = 696k) because script uses 30k/sc from config.
+court: 696000
+shuttlecocks: 16
+shuttlecock_owner: Duong Ly
+host: Duong Ly
+day: sunday
+players:
+  # +1 voters (ratio 2)
+  Nhi Tran: 2
+  Vũ Hải Sơn: 2
+  Hanh Phan Thuy: 2
+  Lê Thị Chi Linh: 2
+  Thành Nguyễn: 2
+  # Regular voters (ratio 1)
+  Bùi Thanh Tùng: 1
+  Duy Hồ: 1
+  Nguyễn Sơn Tùng: 1
