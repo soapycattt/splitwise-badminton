@@ -28,7 +28,7 @@ def main():
         sys.exit(1)
 
     group_id, members = load_members()
-    aliases, unmatched_people, default_absorber = load_aliases()
+    aliases, unmatched_people, default_absorber, host_identities = load_aliases()
 
     if args[0] == "--desc":
         desc = args[1]
@@ -74,10 +74,14 @@ def main():
 
     # Also delete associated reimbursements
     host_name = session.get("host", CONFIG.get("default_host", "")) if date else ""
-    host_id, _, _ = resolve_user(host_name, members, aliases, unmatched_people, default_absorber) if host_name else (None, None, None)
+    host_id, _, _ = resolve_user(
+        host_name, members, aliases, unmatched_people, default_absorber, host_identities,
+    ) if host_name else (None, None, None)
 
     for owner_name, owner_count in shuttlecock_owners.items():
-        owner_id, owner_resolved, _ = resolve_user(owner_name, members, aliases, unmatched_people, default_absorber)
+        owner_id, owner_resolved, _ = resolve_user(
+            owner_name, members, aliases, unmatched_people, default_absorber, host_identities,
+        )
         if host_id and owner_id != host_id and owner_count > 0:
             reimburse_desc = f"Shuttlecock reimbursement {date} ({owner_resolved})"
             reimburse_id = find_expense_by_description(group_id, reimburse_desc)

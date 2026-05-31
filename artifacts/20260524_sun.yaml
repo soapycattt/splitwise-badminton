@@ -1,0 +1,25 @@
+date: 2026-05-24
+total: 1500000
+day: sunday
+court: 1050000  # 3 courses x 350k
+shuttlecock_owners:
+  Triet Le: 12
+  Lý Dương: 3
+host: Duong Ly
+players:
+  # +2 voters (ratio 3)
+  Long Dinh: 3
+  Hanh Phan Thuy: 3
+  Lê Thị Chi Linh: 3
+  Thành Nguyễn: 3
+  Phú Lâm: 3
+  # +1 voter (ratio 2)
+  Nhi Tran: 2
+  # Regular voters (ratio 1)
+  Bùi Thanh Tùng: 1
+  Nguyễn Hồng Hoài Bảo: 1
+  Triet Le: 1
+  Nguyen Tran Nam: 1
+  Thắng Phạm: 1
+  Lý Dương: 1
+  Khoa Huy: 1

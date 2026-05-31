@@ -57,13 +57,23 @@ def load_aliases():
     routing = data.get("_unmatched_routing", {})
     unmatched_people = [p.lower() for p in routing.get("people", [])]
     default_absorber = routing.get("default_absorber", "").lower()
+    host_identities = [p.lower() for p in routing.get("host_identities", [])]
 
-    return aliases, unmatched_people, default_absorber
+    return aliases, unmatched_people, default_absorber, host_identities
 
 
-def resolve_user(name, members, aliases, unmatched_people, default_absorber):
+def format_absorbed_details(absorbed_entries, host_resolved):
+    """Build Splitwise expense details for guest shares routed to the host."""
+    if not absorbed_entries:
+        return None
+    parts = [f"{name} ({amount:,.0f} VND)" for name, _, amount in absorbed_entries]
+    return f"Guest shares absorbed by {host_resolved}: " + ", ".join(parts)
+
+
+def resolve_user(name, members, aliases, unmatched_people, default_absorber, host_identities=None):
     """Resolve a name to a Splitwise user ID. Returns (user_id, resolved_name, absorbed)."""
     key = name.lower().strip()
+    host_identities = host_identities or []
 
     if key in unmatched_people:
         if default_absorber in members:
@@ -73,7 +83,8 @@ def resolve_user(name, members, aliases, unmatched_people, default_absorber):
     if key in aliases:
         resolved = aliases[key]
         if resolved in members:
-            return members[resolved], resolved, False
+            absorbed = resolved == default_absorber and key not in host_identities
+            return members[resolved], resolved, absorbed
 
     if key in members:
         return members[key], key, False
@@ -120,7 +131,7 @@ def find_expense_by_description(group_id, description, date=None):
     return None
 
 
-def _build_expense_data(description, cost, group_id, payer_id, shares, date=None):
+def _build_expense_data(description, cost, group_id, payer_id, shares, date=None, details=None):
     data = {
         "cost": f"{cost:.2f}",
         "description": description,
@@ -129,6 +140,8 @@ def _build_expense_data(description, cost, group_id, payer_id, shares, date=None
     }
     if date:
         data["date"] = f"{date}T12:00:00+07:00"
+    if details:
+        data["details"] = details
 
     for i, (user_id, owed) in enumerate(shares):
         data[f"users__{i}__user_id"] = user_id
@@ -138,8 +151,8 @@ def _build_expense_data(description, cost, group_id, payer_id, shares, date=None
     return data
 
 
-def create_expense(description, cost, group_id, payer_id, shares, date=None, dry_run=False):
-    data = _build_expense_data(description, cost, group_id, payer_id, shares, date)
+def create_expense(description, cost, group_id, payer_id, shares, date=None, details=None, dry_run=False):
+    data = _build_expense_data(description, cost, group_id, payer_id, shares, date, details)
 
     if dry_run:
         return {"id": "DRY_RUN", "data": data}
@@ -159,8 +172,8 @@ def create_expense(description, cost, group_id, payer_id, shares, date=None, dry
     return result["expenses"][0]
 
 
-def update_expense(expense_id, description, cost, group_id, payer_id, shares, date=None, dry_run=False):
-    data = _build_expense_data(description, cost, group_id, payer_id, shares, date)
+def update_expense(expense_id, description, cost, group_id, payer_id, shares, date=None, details=None, dry_run=False):
+    data = _build_expense_data(description, cost, group_id, payer_id, shares, date, details)
 
     if dry_run:
         return {"id": expense_id, "data": data}

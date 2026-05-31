@@ -26,6 +26,7 @@
     "ha pham": "phạm hoàng hà",
     "nguyễn hà minh anh": "nguyen ha minh anh",
     "khoa": "a.khoa",
+    "khoa huy": "khoa huy",
     "ba khoa tran": "a.khoa",
     "nguyen tran nam": "nam",
     "lý dương": "duong ly",
@@ -41,6 +42,7 @@
   "_unmatched_routing": {
     "_comment": "People not in Splitwise group — their share gets added to this person",
     "default_absorber": "duong ly",
+    "host_identities": ["duong ly", "be ly", "ly duong", "lý dương"],
     "people": ["gia hân"]
   }
 }

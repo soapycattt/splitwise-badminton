@@ -10,7 +10,7 @@ from datetime import datetime
 import yaml
 
 from api import (
-    CONFIG, load_members, load_aliases, resolve_user,
+    CONFIG, load_members, load_aliases, resolve_user, format_absorbed_details,
     find_expense_by_description, update_expense,
 )
 
@@ -32,7 +32,7 @@ def main():
         session = yaml.safe_load(f)
 
     group_id, members = load_members()
-    aliases, unmatched_people, default_absorber = load_aliases()
+    aliases, unmatched_people, default_absorber, host_identities = load_aliases()
 
     date = str(session["date"])
     shuttlecock_cost = CONFIG.get("shuttlecock_cost", 32000)
@@ -62,16 +62,20 @@ def main():
     shuttlecock_total = shuttlecock_count * shuttlecock_cost
     total_cost = court_cost + shuttlecock_total
 
-    host_id, host_resolved, _ = resolve_user(host_name, members, aliases, unmatched_people, default_absorber)
+    host_id, host_resolved, _ = resolve_user(
+        host_name, members, aliases, unmatched_people, default_absorber, host_identities,
+    )
 
     total_ratio = sum(players.values())
     cost_per_unit = total_cost / total_ratio
 
     user_shares = {}
-    absorbed_notes = []
+    absorbed_entries = []
 
     for name, ratio in players.items():
-        uid, resolved, absorbed = resolve_user(name, members, aliases, unmatched_people, default_absorber)
+        uid, resolved, absorbed = resolve_user(
+            name, members, aliases, unmatched_people, default_absorber, host_identities,
+        )
         owed = cost_per_unit * ratio
         if uid in user_shares:
             existing_owed, existing_names = user_shares[uid]
@@ -79,7 +83,7 @@ def main():
         else:
             user_shares[uid] = (owed, [name])
         if absorbed:
-            absorbed_notes.append(f"  {name} (ratio {ratio}) → absorbed into {default_absorber}")
+            absorbed_entries.append((name, ratio, owed))
 
     raw_shares = [(uid, owed) for uid, (owed, _) in user_shares.items()]
     if host_id not in [uid for uid, _ in raw_shares]:
@@ -88,6 +92,8 @@ def main():
     remainder = total_cost - sum(owed for _, owed in shares)
     last_uid, last_owed = shares[-1]
     shares[-1] = (last_uid, round(last_owed + remainder, 2))
+
+    absorbed_details = format_absorbed_details(absorbed_entries, host_resolved)
 
     day_name = session.get("day", datetime.strptime(date, "%Y-%m-%d").strftime("%A").lower())
     shuttle_note = f" ({shuttlecock_count} sc)" if shuttlecock_count > 0 else ""
@@ -111,10 +117,11 @@ def main():
         label = ", ".join(names)
         print(f"  {label}: {owed:,.0f} VND")
 
-    if absorbed_notes:
-        print(f"\n⚠ Absorbed:")
-        for note in absorbed_notes:
-            print(note)
+    if absorbed_entries:
+        print(f"\n⚠ Absorbed into {host_resolved}:")
+        for name, ratio, owed in absorbed_entries:
+            print(f"  {name} (ratio {ratio}): {owed:,.0f} VND")
+        print(f"Details: {absorbed_details}")
 
     if dry_run:
         print(f"\n[DRY RUN] No expenses updated.")
@@ -125,11 +132,13 @@ def main():
         print("Cancelled.")
         return
 
-    expense = update_expense(existing_id, desc, total_cost, group_id, host_id, shares, date=date)
+    expense = update_expense(existing_id, desc, total_cost, group_id, host_id, shares, date=date, details=absorbed_details)
     print(f"\n✓ Updated: '{desc}' ({total_cost:,.0f} VND) — id: {expense['id']}")
 
     for owner_name, owner_count in shuttlecock_owners.items():
-        owner_id, owner_resolved, _ = resolve_user(owner_name, members, aliases, unmatched_people, default_absorber)
+        owner_id, owner_resolved, _ = resolve_user(
+            owner_name, members, aliases, unmatched_people, default_absorber, host_identities,
+        )
         owner_total = owner_count * shuttlecock_cost
         if owner_id != host_id and owner_total > 0:
             reimburse_shares = [
