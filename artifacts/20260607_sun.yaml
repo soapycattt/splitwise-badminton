@@ -1,0 +1,21 @@
+date: 2026-06-07
+total: 1050000
+day: sunday
+court: 1050000  # 3 courses x 350k
+host: Duong Ly
+players:
+  # +2 voters (ratio 3)
+  Nguyễn Sơn Tùng: 3
+  Thành Nguyễn: 3
+  # +1 voters (ratio 2)
+  Phú Lâm: 2
+  TR James: 2
+  # Regular voters (ratio 1)
+  Vũ Hải Sơn: 1
+  Nguyễn Hồng Hoài Bảo: 1
+  Long Dinh: 1
+  Nguyễn Minh Khuê: 1
+  Hanh Phan Thuy: 1
+  Lý Dương: 1
+  Phan Trung Hiếu: 1
+  Nguyen Thanh Mai: 1

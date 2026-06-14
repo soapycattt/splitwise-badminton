@@ -3,6 +3,7 @@
 61329423,A.Khoa
 106683923,Amyra
 48360442,Ben Le
+121437800,Chi Linh
 72800572,Duong Ly
 34276560,Duy Ho
 60330099,Dương Không Lý
@@ -13,6 +14,7 @@
 119982292,Hoai Bao
 113276429,Hoang Do
 48028297,Huong Techcom THUYHUONG14
+106838667,James Karott
 60315360,Khanh Tran Quoc
 120780032,Khoa Huy
 65727587,Khuê
@@ -29,6 +31,7 @@
 18872016,Ngọc Zoe
 33618798,nhity
 106691094,Patrick Nguyen
+121352744,Phan Trung Hiếu
 19016543,phiendpham
 69933746,Phuong Tran
 119984991,Phú
