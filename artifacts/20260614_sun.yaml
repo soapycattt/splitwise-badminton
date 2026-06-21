@@ -1,0 +1,26 @@
+date: 2026-06-14
+total: 1590000
+day: sunday
+court: 1050000  # 3 courses x 350k
+shuttlecocks: 18
+shuttlecock_owner: Duong Ly
+host: Duong Ly
+players:
+  # +2 voter (ratio 3)
+  Thành Nguyễn: 3
+  # +1 voters (ratio 2)
+  Nhi Tran: 2
+  Hanh Phan Thuy: 2
+  Lê Thị Chi Linh: 2
+  Phan Trung Hiếu: 2
+  # Regular voters (ratio 1)
+  Phú Lâm: 1
+  Vũ Hải Sơn: 1
+  Bùi Thanh Tùng: 1
+  Long Dinh: 1
+  Nguyễn Minh Khuê: 1
+  Nguyen Tran Nam: 1
+  Lý Dương: 1
+  Diễm Quỳnh: 1
+  Thinh T Nguyen: 1
+  TR James: 1  # late vote → absorbed by Duong Ly
