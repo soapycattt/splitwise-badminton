@@ -1,0 +1,30 @@
+date: 2026-07-12
+total: 1940000
+day: sunday
+court: 1400000  # 4 courts x 350k
+shuttlecocks: 18
+shuttlecock_owner: Duong Ly
+host: Duong Ly
+players:
+  # +2 voters (ratio 3)
+  Long Dinh: 3
+  Thành Nguyễn: 3
+  # +1 voters (ratio 2)
+  Nhi Tran: 2
+  Nguyễn Sơn Tùng: 2
+  Thắng Phạm: 2
+  Phan Trung Hiếu: 2
+  TR James: 2
+  Nam Võ Đình: 2
+  # Regular voters (ratio 1)
+  Ba Khoa Tran: 1
+  Mai Tuyet Nguyen: 1
+  Nguyễn Hồng Hoài Bảo: 1
+  Nguyễn Minh Khuê: 1
+  Triet Le: 1
+  Lý Dương: 1
+  Khoa Huy: 1
+  Phú Lâm: 1
+  Thịnh T Nguyen: 1
+  # Did not vote but attended
+  Son: 1
