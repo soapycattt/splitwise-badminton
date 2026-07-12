@@ -19,6 +19,7 @@
 120780032,Khoa Huy
 65727587,Khuê
 66675870,Long Dinh
+65029860,Mai Nguyen / Mina
 106708468,Minh Anh
 115395496,Minh Thư
 121087901,My Dương
@@ -47,4 +48,5 @@
 106070361,Uyên nhi
 108784511,Vy Huynh
 119086146,Vy Nguyen
+122319440,Đình Nem
 115018477,Đức

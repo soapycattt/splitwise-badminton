@@ -1,0 +1,14 @@
+date: 2026-06-27
+total: 420000
+day: saturday
+shuttlecocks: 4
+shuttlecock_owner: Phien Pham
+host: Duong Ly
+players:
+  # +1 voter (ratio 2)
+  Đào Đức: 2
+  # Regular voters (ratio 1)
+  Phien Pham: 1
+  Phuong N. Tran: 1
+  Mai Thanh Ngọc: 1
+  Nguyễn Hồng Hoài Bảo: 1

@@ -1,0 +1,29 @@
+date: 2026-07-05
+total: 1210000
+day: sunday
+shuttlecocks: 19
+shuttlecock_owner: Duong Ly
+host: Duong Ly
+# Absorbed players (name: amount in VND)
+absorbed:
+  Nguyen Thanh Mai: 48400
+players:
+  # +4 voter (ratio 5)
+  Thành Nguyễn: 5
+  # +1 voters (ratio 2)
+  Nhi Tran: 2
+  Long Dinh: 2
+  Hanh Phan Thuy: 2  # → Hailey Phan
+  Thắng Phạm: 2
+  TR James: 2  # → James Karott
+  # Regular voters (ratio 1)
+  Mai Tuyet Nguyen: 1  # → Mai Nguyen / Mina
+  Nguyễn Hồng Hoài Bảo: 1
+  Nguyễn Minh Khuê: 1
+  Nguyễn Sơn Tùng: 1
+  Nguyen Tran Nam: 1
+  Lê Thị Chi Linh: 1
+  Lý Dương: 1
+  Phú Lâm: 1
+  Phan Trung Hiếu: 1
+  Nguyen Thanh Mai: 1  # unmatched → absorbed by Duong Ly

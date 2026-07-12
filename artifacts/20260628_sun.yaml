@@ -1,0 +1,24 @@
+date: 2026-06-28
+total: 1060000
+day: sunday
+shuttlecocks: 14
+shuttlecock_owner: Triet Le
+host: Duong Ly
+players:
+  # +3 voter (ratio 4)
+  Thành Nguyễn: 4
+  # +1 voters (ratio 2)
+  Nhi Tran: 2
+  Nguyễn Sơn Tùng: 2
+  Thắng Phạm: 2
+  Phan Trung Hiếu: 2
+  TR James: 2
+  Nam Võ Đình: 2  # → Đình Nem
+  # Regular voters (ratio 1)
+  Nguyễn Hồng Hoài Bảo: 1
+  Long Dinh: 1
+  Nguyễn Minh Khuê: 1
+  Triet Le: 1
+  Hanh Phan Thuy: 1  # → Hailey Phan
+  Khoa Huy: 1
+  Phú Lâm: 1
