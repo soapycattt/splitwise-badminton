@@ -1,0 +1,25 @@
+date: 2026-08-02
+total: 1500000
+day: sunday
+shuttlecocks: 16
+shuttlecock_owner: Duong Ly
+host: Duong Ly
+players:
+  # +3 voter (ratio 4)
+  Long Dinh: 4
+  # +2 voters (ratio 3)
+  Gia Hân: 3
+  Hanh Phan Thuy: 3  # → Hailey Phan
+  # +1 voters (ratio 2)
+  TR James: 2  # → James Karott
+  Nam Võ Đình: 2  # → Đình Nem
+  # Regular voters (ratio 1)
+  Nhi Tran: 1  # → nhity
+  Nguyễn Hồng Hoài Bão: 1  # → Hoai Bao
+  Hằng Phan: 1  # → thành nguyễn
+  Lê Văn Hiếu: 1  # → thành nguyễn
+  Nguyễn Minh Khuê: 1
+  Nguyễn Sơn Tùng: 1  # → Tung
+  Lý Dương: 1  # → Duong Ly (host)
+  Thành Nguyễn: 1
+  Nguyễn Nhi: 1  # → Nhi nguyễn

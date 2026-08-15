@@ -113,7 +113,7 @@ The user provides:
 
 ## Rules
 
-- Court prices: Sunday 640k, Saturday 300k, Tuesday 135k
+- Court prices: Sunday 1,020k (3 courts × 340k), Saturday 300k, Tuesday 135k
 - Shuttlecock: 30,000 VND each
 - Default host: Duong Ly (id: 72800572)
 - Default absorber for unmatched guests: Duong Ly

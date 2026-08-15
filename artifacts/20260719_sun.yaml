@@ -1,0 +1,36 @@
+date: 2026-07-19
+total: 2060000
+day: sunday
+court: 1400000  # 4 courts x 350k
+shuttlecocks: 22  # Khoa 660k / 30k
+shuttlecock_owner: Ba Khoa Tran
+host: Duong Ly
+# Absorbed players (name: amount in VND)
+absorbed:
+  Nguyen Thanh Mai: 66452  # unmatched guest
+players:
+  # +3 voter (ratio 4)
+  Long Dinh: 4
+  # +2 voter (ratio 3)
+  Hanh Phan Thuy: 3  # → Hailey Phan
+  # +1 voters (ratio 2)
+  Nhi Tran: 2
+  Nguyễn Sơn Tùng: 2
+  Thắng Phạm: 2
+  TR James: 2
+  Nam Võ Đình: 2
+  # Regular voters (ratio 1)
+  Ba Khoa Tran: 1
+  Vũ Hải Sơn: 1
+  Mai Tuyet Nguyen: 1
+  Nguyễn Hồng Hoài Bão: 1  # → Hoai Bao
+  Hằng Phan: 1  # → thành nguyễn
+  Duy Hồ: 1
+  Lê Văn Hiếu: 1  # → thành nguyễn
+  Nguyễn Minh Khuê: 1
+  Triet Le: 1
+  Nguyen Tran Nam: 1
+  Thành Nguyễn: 1
+  Phú Lâm: 1
+  Nguyễn Nhi: 1  # → Nhi nguyễn
+  Nguyen Thanh Mai: 1  # absorbed

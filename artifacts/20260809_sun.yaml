@@ -1,0 +1,26 @@
+date: 2026-08-09
+total: 1380000
+day: sunday
+shuttlecocks: 12
+shuttlecock_owner: Long Dinh
+host: Duong Ly
+# Absorbed players (name: amount in VND)
+# NOTE: CN poll said 13 votes; 11 visible + Nam from +1. 1 main voter may still be missing.
+absorbed:
+  Hien Le: 69000  # ratio 1
+players:
+  # +3 voter (ratio 4)
+  Long Dinh: 4
+  # +1 voters (ratio 2)
+  Nhi Tran: 2
+  Nguyễn Sơn Tùng: 2
+  Thủy Tiên: 2  # → Tien Nguyen
+  TR James: 2  # → James Karott
+  Nam Võ Đình: 2  # → Đình Nem (+1; may also be in main)
+  # Regular voters (ratio 1)
+  Hằng Phan: 1  # → thành nguyễn
+  Lê Văn Hiếu: 1  # → thành nguyễn
+  Nguyễn Minh Khuê: 1
+  Thành Nguyễn: 1
+  Hien Le: 1  # absorbed → Duong Ly
+  Nguyễn Nhi: 1  # → Nhi nguyễn

@@ -111,7 +111,7 @@ Claude will:
 ```json
 {
   "court_prices": {
-    "sunday": 640000,
+    "sunday": 1020000,
     "saturday": 300000,
     "tuesday": 135000
   },

@@ -43,15 +43,30 @@
     "phú lâm": "phú",
     "phuong n. tran": "phuong tran",
     "nguyễn hồng hoài bảo": "hoai bao",
+    "nguyễn hồng hoài bão": "hoai bao",
+    "hằng phan": "thành nguyễn",
+    "hang phan": "thành nguyễn",
+    "lê văn hiếu": "thành nguyễn",
+    "le van hieu": "thành nguyễn",
+    "nguyễn nhi": "nhi nguyễn",
+    "nguyen nhi": "nhi nguyễn",
     "vy lan": "vy nguyen",
     "phan trung hiếu": "phan trung hiếu",
     "tr james": "james karott",
-    "james karott": "james karott"
+    "james karott": "james karott",
+    "nguyễn lê nam đông": "nam đông",
+    "nguyen le nam dong": "nam đông",
+    "nam đông": "nam đông",
+    "gia hân": "gia hân",
+    "gia han": "gia hân",
+    "thủy tiên": "tien nguyen",
+    "thuy tien": "tien nguyen",
+    "tien nguyen": "tien nguyen"
   },
   "_unmatched_routing": {
     "_comment": "People not in Splitwise group — their share gets added to this person",
     "default_absorber": "duong ly",
     "host_identities": ["duong ly", "be ly", "ly duong", "lý dương"],
-    "people": ["gia hân", "nguyen thanh mai"]
+    "people": ["nguyen thanh mai", "hien le"]
   }
 }
