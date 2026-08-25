@@ -1,0 +1,29 @@
+date: 2026-08-16
+total: 1440000
+day: sunday
+shuttlecock_owners:
+  Long Dinh: 10
+  Triet Le: 4
+host: Duong Ly
+# Absorbed players (name: amount in VND)
+absorbed:
+  Nguyen Thanh Mai: 180000  # unmatched guest, ratio 3
+players:
+  # +2 voters (ratio 3)
+  Hanh Phan Thuy: 3  # → Hailey Phan
+  TR James: 3  # → James Karott
+  Nguyen Thanh Mai: 3  # absorbed → Duong Ly
+  # +1 voters (ratio 2)
+  Nhi Tran: 2
+  Long Dinh: 2
+  Nguyễn Sơn Tùng: 2
+  # Regular voters (ratio 1)
+  Ba Khoa Tran: 1  # → A.Khoa
+  Nguyễn Hồng Hoài Bão: 1  # → Hoai Bao
+  Hằng Phan: 1  # → thành nguyễn
+  Lê Văn Hiếu: 1  # → thành nguyễn
+  Nguyễn Minh Khuê: 1
+  Thắng Phạm: 1
+  Thành Nguyễn: 1
+  Phú Lâm: 1  # → Phú
+  Nguyễn Nhi: 1  # → Nhi nguyễn
